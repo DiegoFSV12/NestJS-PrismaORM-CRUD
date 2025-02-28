@@ -1,0 +1,12 @@
+services:
+  api-nest:
+    container_name: api-nest-container
+    image: postgres
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "3002:5432"  
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nest  
